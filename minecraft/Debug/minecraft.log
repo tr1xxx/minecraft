@@ -1,2 +1,9 @@
-﻿  Display.cpp
+﻿  minecraft.cpp
+  Application.cpp
+  Display.cpp
+  Game_State.cpp
+  Playing.cpp
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'E:\projects\minecraft\minecraft\Debug\vc120.pdb'; linking object as if no debug info
   minecraft.vcxproj -> E:\projects\minecraft\minecraft\Debug\minecraft.exe
