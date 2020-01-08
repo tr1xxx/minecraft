@@ -14,6 +14,11 @@ public:
 	void unbind();
 
 private:
-	GLuint m_vertexId;
+	void addVBO(int dim, const std::vector<GLfloat>& data);
+
+	std::vector<GLuint> m_buffers;
+	GLuint m_vao;
+
+	GLuint m_vboCount = 0;
 
 };
