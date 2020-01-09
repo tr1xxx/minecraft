@@ -1,5 +1,7 @@
-﻿  Application.cpp
-  Model.cpp
-  Playing.cpp
-  Generating Code...
+﻿  Playing.cpp
+E:\projects\minecraft\minecraft\Source\States\Playing.cpp(24,7): warning C4305: 'initializing': truncation from 'double' to '_Ty'
+          with
+          [
+              _Ty=GLfloat
+          ]
   minecraft.vcxproj -> E:\projects\minecraft\minecraft\Debug\minecraft.exe
