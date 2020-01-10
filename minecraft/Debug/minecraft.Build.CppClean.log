@@ -1,10 +1,14 @@
 e:\projects\minecraft\minecraft\debug\vc142.pdb
 e:\projects\minecraft\minecraft\debug\vc142.idb
-e:\projects\minecraft\minecraft\debug\minecraft.obj
-e:\projects\minecraft\minecraft\debug\display.obj
-e:\projects\minecraft\minecraft\debug\game_state.obj
 e:\projects\minecraft\minecraft\debug\playing.obj
 e:\projects\minecraft\minecraft\debug\application.obj
+e:\projects\minecraft\minecraft\debug\simple_shader.obj
+e:\projects\minecraft\minecraft\debug\shader_program.obj
+e:\projects\minecraft\minecraft\debug\game_state.obj
+e:\projects\minecraft\minecraft\debug\shader_loader.obj
+e:\projects\minecraft\minecraft\debug\model.obj
+e:\projects\minecraft\minecraft\debug\display.obj
+e:\projects\minecraft\minecraft\debug\minecraft.obj
 e:\projects\minecraft\minecraft\debug\minecraft.exe
 e:\projects\minecraft\minecraft\debug\minecraft.ilk
 e:\projects\minecraft\minecraft\debug\minecraft.pdb

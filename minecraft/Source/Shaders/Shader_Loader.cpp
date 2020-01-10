@@ -61,7 +61,7 @@ namespace Shader {
 
 	}
 
-	GLuint loaderShader(const std::string& vertexShaderFile, const std::string& fragmentShaderFile) {
+	GLuint loadShader(const std::string& vertexShaderFile, const std::string& fragmentShaderFile) {
 	
 		auto vertexSource   = getSource(vertexShaderFile);
 		auto fragmentSource = getSource(fragmentShaderFile);
@@ -77,7 +77,5 @@ namespace Shader {
 		return programID;
 
 	}
-
-
-
+	
 }

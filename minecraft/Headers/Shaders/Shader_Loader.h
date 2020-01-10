@@ -5,6 +5,6 @@
 
 namespace Shader {
 
-	GLuint loadShader(const std::string& vertexShaderFile, const std::string& fragmentShaderFile);
+		GLuint loadShader(const std::string& vertexShaderFile, const std::string& fragmentShaderFile);
 
 }

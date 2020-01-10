@@ -3,9 +3,10 @@
 
 namespace Shader {
 
-	Shader_Program::Shader_Program(const std::string& vertexShaderFile, const std::string& fragmentShaderFile) : m_programID (loadShader(vertexShaderFile, fragmentShaderFile)) {
+	Shader_Program::Shader_Program(const std::string& vertexShaderFile, const std::string& fragmentShaderFile) 
+		: m_programID (loadShader(vertexShaderFile, fragmentShaderFile)) /* unresolved external symbol error being caused here*/ {
 	
-
+		
 
 	}
 
@@ -24,6 +25,12 @@ namespace Shader {
 	void Shader_Program::unbind() {
 	
 		glUseProgram(0);
+
+	}
+
+	void Shader_Program::bindAttribute(GLuint location, const GLchar* name) {
+	
+		glBindAttribLocation(m_programID, location, name);
 
 	}
 
