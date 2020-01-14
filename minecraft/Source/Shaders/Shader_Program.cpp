@@ -28,9 +28,15 @@ namespace Shader {
 
 	}
 
-	void Shader_Program::bindAttribute(GLuint location, const GLchar* name) {
+	void Shader_Program::loadFloat(GLuint location, float value) {
 	
-		glBindAttribLocation(m_programID, location, name);
+		glUniform1f(location, value);
+
+	}
+
+	GLuint Shader_Program::getID() const {
+
+		return m_programID;
 
 	}
 
