@@ -1,2 +1,5 @@
-﻿  Texture.cpp
+﻿  Application.cpp
+  Model.cpp
+  Playing.cpp
+  Generating Code...
   minecraft.vcxproj -> E:\projects\minecraft\minecraft\Debug\minecraft.exe
