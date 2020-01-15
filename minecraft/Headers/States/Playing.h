@@ -16,7 +16,7 @@ namespace State {
 
 		void input  () override;
 		void update () override;
-		void draw   () override;
+		void draw   (Renderer::Master& renderer) override;
 
 	private:
 
