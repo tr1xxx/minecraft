@@ -18,7 +18,7 @@ namespace Renderer {
 
 	}
 
-	void Master::draw(const Model& model) {
+	void Master::draw(const Quad& model) {
 	
 		m_simpleRenderer.draw(model);
 

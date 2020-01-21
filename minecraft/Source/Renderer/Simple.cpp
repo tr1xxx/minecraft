@@ -1,12 +1,12 @@
 #include "../../Headers/Renderer/Simple.h"
 
-#include "../../Headers/Model.h"
+#include "../../Headers/Temp/Quad.h"
 
 namespace Renderer {
 
-	void Simple::draw(const Model& model) {
+	void Simple::draw(const Quad& quad) {
 	
-		m_models.push_back(&model);
+		m_quads.push_back(&quad);
 
 	}
 	
@@ -15,20 +15,21 @@ namespace Renderer {
 		m_shader.bind();
 		m_shader.setTime(m_clock.getElapsedTime().asSeconds());
 
-		for (auto& model : m_models) {
+		for (auto& quad : m_quads) {
 
-			prepare(*model);
-			glDrawElements(GL_TRIANGLES, model->getIndicesCount(), GL_UNSIGNED_INT, nullptr);
+			prepare(*quad);
+			glDrawElements(GL_TRIANGLES, quad->getModel().getIndicesCount(), GL_UNSIGNED_INT, nullptr);
 
 		}
 
-		m_models.clear();
+		m_quads.clear();
 
 	}
 
-	void Simple::prepare(const Model& model) {
+	void Simple::prepare(const Quad& quad) {
 	
-		model.bind();
+		quad.getModel().bind();
+		m_shader.setPosition(quad.position);
 
 	}
 
