@@ -10,9 +10,9 @@ namespace Renderer {
 
 	}
 
-	void Master::update() {
+	void Master::update(const Entity& camera) {
 
-		m_simpleRenderer.update();
+		m_simpleRenderer.update(camera);
 	
 		Display::update();
 

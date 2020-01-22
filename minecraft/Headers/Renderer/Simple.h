@@ -6,6 +6,7 @@
 #include "../Shaders/Simple_Shader.h"
 
 class Quad;
+struct Entity;
 
 namespace Renderer {
 
@@ -15,7 +16,7 @@ namespace Renderer {
 
 		void draw(const Quad& quad);
 
-		void update();
+		void update(const Entity& camera);
 
 	private:
 

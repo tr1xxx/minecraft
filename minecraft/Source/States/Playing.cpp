@@ -15,15 +15,17 @@ namespace State {
 		m_texture.load("grass");
 		m_texture.bind();
 
+		m_quad.position.z = - 3;
+
 	}
 
-	void Playing::input() {
+	void Playing::input(Entity& camera) {
 	
 
 
 	}
 
-	void Playing::update() {
+	void Playing::update(Entity& camera) {
 	
 		m_quad.position.x = sin(clock.getElapsedTime().asSeconds());
 

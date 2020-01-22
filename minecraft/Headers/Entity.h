@@ -3,6 +3,7 @@
 
 struct Entity {
 
-	Vector2 position;
+	Vector3 position;
+	Vector3 rotation;
 
 };
