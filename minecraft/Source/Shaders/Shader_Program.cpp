@@ -4,7 +4,7 @@
 namespace Shader {
 
 	Shader_Program::Shader_Program(const std::string& vertexShaderFile, const std::string& fragmentShaderFile) 
-		: m_programID (loadShader(vertexShaderFile, fragmentShaderFile)) /* unresolved external symbol error being caused here*/ {
+		: m_programID (loadShader(vertexShaderFile, fragmentShaderFile)) {
 	
 		
 

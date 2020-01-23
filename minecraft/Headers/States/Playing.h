@@ -25,7 +25,9 @@ namespace State {
 		Shader::Simple_Shader m_shader;
 		Texture::Basic_Texture m_texture;
 
-		Quad m_quad;
+		//Quad m_quad;
+
+		std::vector<Quad*> m_quads;
 
 	};
 

@@ -35,10 +35,10 @@ namespace Maths {
 
 	Matrix4 createProjMatrix() {
 
-		return glm::perspective(glm::radians(120.0f), 
-								(float)Display::WIDTH / (float)Display::HEIGHT,
-								0.001f,
-								1000.0f);
+		return glm::perspective(glm::radians(120.0f),
+			(float)Display::WIDTH / (float)Display::HEIGHT,
+			0.001f,
+			1000.0f);
 
 	}
 
