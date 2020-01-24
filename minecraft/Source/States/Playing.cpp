@@ -15,18 +15,11 @@ namespace State {
 		m_texture.load("grass");
 		m_texture.bind();
 
-		auto testSize = 50;
+		Quad* quad = new Quad();
+		quad->rotation.x = 90;
+		quad->position = { 0.4, 0.4, 0 };
+		m_quads.push_back(quad);
 
-		for (int x = -testSize; x < testSize; x++)
-		{
-			for (int z = testSize; z > -testSize; z--)
-			{
-				Quad* quad = new Quad();
-				quad->rotation.x = 90;
-				quad->position = { x, -1, z };
-				m_quads.push_back(quad);
-			}
-		}
 		std::cout << m_quads.size() << std::endl;
 
 	}
@@ -40,7 +33,7 @@ namespace State {
 	void Playing::update(Entity& camera) {
 		for (auto& quad : m_quads)
 		{
-			quad->position.y = sin(clock.getElapsedTime().asSeconds());
+			quad->position.z = sin(clock.getElapsedTime().asSeconds());
 		}
 	}
 
