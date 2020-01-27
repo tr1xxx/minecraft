@@ -4,43 +4,40 @@
 #include <SFML/System/Clock.hpp>
 
 #include "../../Headers/Renderer/Master.h"
+#include "../../Headers/Camera.h"
 
 namespace State {
 
 	sf::Clock clock;
 
 	Playing::Playing(Application& application)
-	: Game_State(application) {
-	
-		m_texture.load("grass");
+	: Game_State(application)
+	, m_texture ("Texture_Atlas", 512, 16)
+	, m_quad    (m_texture) {
+
 		m_texture.bind();
 
-		Quad* quad = new Quad();
-		quad->rotation.x = 90;
-		quad->position = { 0.4, 0.4, 0 };
-		m_quads.push_back(quad);
-
-		std::cout << m_quads.size() << std::endl;
+		m_quad.position.z -= 2;
+		m_quad.position.y -= 2;
 
 	}
 
-	void Playing::input(Entity& camera) {
+	void Playing::input(Camera& camera) {
 	
 
 
 	}
 
-	void Playing::update(Entity& camera) {
-		for (auto& quad : m_quads)
-		{
-			quad->position.z = sin(clock.getElapsedTime().asSeconds());
-		}
+	void Playing::update(Camera& camera, float dt) {
+
+		camera.input(dt);
+
+		//m_quad.position.x = sin(clock.getElapsedTime().asSeconds());
 	}
 
 	void Playing::draw(Renderer::Master& renderer) {
 
-		for (auto& quad : m_quads)
-			renderer.draw(*quad);
+		renderer.draw(m_quad);
 
 	}
 

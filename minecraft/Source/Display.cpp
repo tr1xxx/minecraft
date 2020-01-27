@@ -23,6 +23,10 @@ namespace Display {
 		glewInit();
 		glViewport(0, 0, WIDTH, HEIGHT);
 
+		glEnable(GL_DEPTH_TEST);
+
+		window->setMouseCursorVisible(false);
+
 	}
 
 	void close() {
@@ -50,7 +54,7 @@ namespace Display {
 
 		while (window->pollEvent(e)) {
 		
-			if (e.type == sf::Event::Closed) {
+			if (e.type == sf::Event::Closed || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
 			
 				close();
 
@@ -63,6 +67,12 @@ namespace Display {
 	bool isOpen() {
 
 		return window->isOpen();
+
+	}
+
+	const sf::Window& get() {
+	
+		return *window;
 
 	}
 

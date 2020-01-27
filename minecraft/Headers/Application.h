@@ -8,6 +8,7 @@
 #include "Renderer/Master.h"
 
 #include "Entity.h"
+#include "Camera.h"
 
 class Application {
 
@@ -24,7 +25,7 @@ private:
 
 	Renderer::Master m_renderer;
 
-	Entity camera;
+	Camera camera;
 
 
 };

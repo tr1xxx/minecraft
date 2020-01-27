@@ -1,5 +1,11 @@
 #pragma once
 
+namespace sf {
+
+	class Window;
+
+}
+
 namespace Display {
 
 	constexpr int WIDTH = 1280;
@@ -14,5 +20,7 @@ namespace Display {
 	void checkForClose();
 
 	bool isOpen();
+
+	const sf::Window& get();
 
 }
