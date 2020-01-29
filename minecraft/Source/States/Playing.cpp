@@ -18,7 +18,7 @@ namespace State {
 		m_texture.bind();
 
 		m_quad.position.z -= 2;
-		m_quad.position.y -= 2;
+		m_quad.position.y += 1;
 
 	}
 
@@ -32,7 +32,7 @@ namespace State {
 
 		camera.input(dt);
 
-		//m_quad.position.x = sin(clock.getElapsedTime().asSeconds());
+		m_quad.position.x = sin(clock.getElapsedTime().asSeconds());
 	}
 
 	void Playing::draw(Renderer::Master& renderer) {
