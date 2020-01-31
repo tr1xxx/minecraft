@@ -3,7 +3,7 @@
 namespace Block {
 
 	Air::Air()
-	: Type("Grass") {
+	: Type("Air") {
 
 
 
