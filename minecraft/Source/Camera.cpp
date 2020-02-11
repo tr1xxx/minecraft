@@ -7,6 +7,19 @@
 
 #include "../Headers/Display.h"
 
+#include "../Headers/Maths/Matrix.h"
+
+Camera::Camera()
+	: m_projectionMatrix(Maths::createProjMatrix())
+{  }
+
+void Camera::update() {
+
+	m_viewMatrix = Maths::createViewMatrix(*this);
+		
+}
+
+
 void Camera::input(float dt) {
 
 	Vector3 change;
@@ -52,8 +65,8 @@ void Camera::mouseInput() {
 
 	auto mouseChange = sf::Mouse::getPosition() - lastMousePosition;
 
-	rotation.y += mouseChange.x;
-	rotation.x += mouseChange.y;
+	rotation.y += mouseChange.x * 0.1;
+	rotation.x += mouseChange.y * 0.1;
 
 	if (rotation.x > 80) {
 	
@@ -83,5 +96,17 @@ void Camera::mouseInput() {
 
 	lastMousePosition = sf::Mouse::getPosition();
 
+
+}
+
+const Matrix4& Camera::getViewMatrix() const {
+
+	return m_viewMatrix;
+
+}
+
+const Matrix4& Camera::getProjectionMatrix() const {
+
+	return m_projectionMatrix;
 
 }

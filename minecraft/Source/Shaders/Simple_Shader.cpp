@@ -8,10 +8,6 @@ namespace Shader {
 		: Shader_Program("Simple_Vertex", "Simple_Fragment") {
 	
 		getUniformLocations();
-		
-		bind();
-		loadMatrix4(m_locationProjMatrix, Maths::createProjMatrix());
-		unbind();
 
 	}
 
