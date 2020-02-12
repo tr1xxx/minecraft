@@ -9,6 +9,7 @@ namespace Block {
 	class Type {
 
 	public:
+		const Data& getData() const;
 
 	protected:
 		Type(const std::string& fileName);
